@@ -1,4 +1,4 @@
-lMarvel API: https://developer.marvel.com/
+Marvel API: https://developer.marvel.com/
 
 ---------------------- Stan Lee Resource Websites - Use these resources for Stan Lee "About" page ---------------------
 The Real Stan Lee - https://therealstanlee.com/
