@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stan Lee 100</title>
+    <script type="module">
+        import {getCharacterByName} from "./scripts/marvel-api.js";
+
+        const selectedCharacter = localStorage.getItem("character"); // Get Character stored in local storage from previous page
+        const imageType = "portrait_incredible"; // Define the type of thumbnail image to retrieve from the marvel api
+
+        getCharacterByName(selectedCharacter, imageType).then(character => { // Retrieve information about selected character using imported function
+        const { name, description } = character;
+
+        document.title = `Stan Lee 100 - ${character.name}`; // Set the page title to the selected character
+        document.getElementById('apiname').innerText = character.name; // Set the h1 to the character name
+        document.getElementById('apidescription').innerText = character.description; // Set the p to the character description
+        document.getElementById('apithumb').src = character.imageURL; // Set the img src to the character image url
+        document.getElementById("apithumb").alt = `A portrait of ${character.name}` // Set the img alt to the portrait of the character
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="logo.png" alt="A stylised image of Stan Lee using his glasses to show 100"></a>
+        <nav>
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="about.html"><li>About Stan Lee</li></a>
+                <a href="index.html"><li>Character #1</li></a>
+                <a href="index.html"><li>Character #2</li></a>
+                <a href="index.html"><li>Character #3</li></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="apiname"></h1>
+        <img id="apithumb">
+        <p id="apidescription"></p>
+    </main>
+    <footer>
+        <p>Data provided by Marvel. © 2014 Marvel</p>
+    </footer>
+</body>
+</html>
