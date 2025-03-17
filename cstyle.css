@@ -1,43 +1,86 @@
 body {
-    background-color: black;
+    background-color: #141e20;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, p, figcaption, .nav-link {
+    color: white;
 }
 
 header {
     display: flex;
-    flex-direction: row;
+    width: 100%;
     justify-content: space-between;
 }
 
 nav {
-    width: 40%;
+    width: 60%;
 }
 
 nav ul {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     list-style: none;
-    font-size: 1.5vw;;
+    font-size: clamp(0.75rem, 2.5vw, 1.75rem);
+    font-family: "Bangers", system-ui;
     padding-bottom: 1vw;
-    border-bottom: solid white 2px;
 }
 
-nav ul a {
+.nav-link:hover {
+    color: #FFF301;
+    text-shadow: 10px 10px 10px #ff0000;
+    padding: 0px 25px 0px 25px;
     text-decoration: none;
-    color: white;
+    font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.spiderman-nav:hover {
+    color: #5076ff;
+    padding: 0px 25px 0px 25px;
+    text-decoration: none;
+    font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+    text-shadow: 10px 10px 10px #ff0000;
+}
+
+.ironman-nav:hover {
+    color: #ff0000;
+    padding: 0px 25px 0px 25px;
+    text-decoration: none;
+    font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+    text-shadow: 10px 10px 10px #FFF301;
+}
+
+.hulk-nav:hover {
+    color: #86ca66;
+    padding: 0px 25px 0px 25px;
+    text-decoration: none;
+    font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+    text-shadow: 10px 10px 10px #ff0000;
 }
 
 main{
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 5%;
     display: flex;
     flex-direction: column;
+    justify-content: left;
     flex-wrap: nowrap;
+    margin: auto;
+}
+
+article {
+    display: flex;
+}
+
+section {
+    display: flex;
 }
 
 footer {
     text-align: center;
+    font-size: 1rem;
 }
 
 figure {
@@ -45,32 +88,32 @@ figure {
 }
 
 figure img {
-    border: .33vw solid;
+    border: 0.33vw solid;
     border-color: red;
     border-radius: 10%;
-    width: 25vw;
-    height: 25vw;
-}
-
-h1, h2, p {
-    color: white;
+    width: 100%;
+    height: 100%;
+    margin: auto;
 }
 
 h1 {
-    font-size: 3vw;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2vw;
+    font-size: clamp(1.25rem, 3vw, 4rem);
     text-align: center;
 }
 
 main p {
-    font-size: 2vw;;
+    font-size: clamp(1rem, 3vw, 2rem);
 }
 
-footer {
-    font-size: 1vw;
+figcaption {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    text-align: center;
 }
 
+#character-main {
+    width: 50%;
+}
+
+#logo {
+    width: 10vw;
+}
