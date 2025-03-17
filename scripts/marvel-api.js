@@ -1,8 +1,8 @@
 import md5 from "./js-md5.js"; // Import the module used for the md5 hash
 
-const publicKey = <PUBLIC API KEY>; // Marvel api public key
-const privateKey = <PRIVATE API KEY>; // Marvel api private key
-const url = "http://gateway.marvel.com/v1/public/characters"; // Marvel api base character url
+const publicKey = "fd241079f6edb887b45d5bea6416cb89"; // Marvel api public key
+const privateKey = "27e8d44d73f2300fbcf59bc1a47bb59e9a0a6285"; // Marvel api private key
+const url = "https://gateway.marvel.com/v1/public/characters"; // Marvel api base character url
 
 
 export async function getCharacterByName(characterName, imageType) {
@@ -20,17 +20,18 @@ export async function getCharacterByName(characterName, imageType) {
         
         // Check if the response was okay
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`); // Throw the error supplied if it applies
+            throw new Error(`HTTPS error! Status: ${response.status}`); // Throw the error supplied if it applies
         }
 
         const data = await response.json(); // If the response is okay format it in json
 
         if (data.data.results.length > 0) {
             const character = data.data.results[0];
+            const httpsUrl = character.thumbnail.path.replace("http", "https"); // change the protocol in the string to be https
             return { // If the json isn't empty return the query data
                 name: character.name,
                 description: character.description, // Return the character description and keep it empty if there isnt one
-                imageURL: `${character.thumbnail.path}/${imageType}.${character.thumbnail.extension}`, // Concatenate the thumbnail path, image size and file extension
+                imageURL: `${httpsUrl}/${imageType}.${character.thumbnail.extension}`, // Concatenate the thumbnail path, image size and file extension
             };
         } else {
             return false; // If the json is empty return false
