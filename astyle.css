@@ -1,0 +1,215 @@
+body {
+  background-color: #141e20; /* colour matched using https://imagecolorpicker.com/ */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #FFF301;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(1.25rem, 4vw, 4rem);
+  margin-top: 8%;
+}
+
+h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+h3 {
+  color: #000;
+  font-family: "Great Vibes", cursive;
+  font-size: 35px;
+  letter-spacing: 1.5px;
+  word-spacing: 2.5px;
+}
+
+.logo {
+  width: 10%; /* Adjust size */
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* --------- NAVIGATION --------- */
+
+nav {
+  width: 60%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: clamp(1rem, 2.5vw, 1.75rem);
+  font-family: "Bangers", system-ui;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Bangers", system-ui;
+}
+
+.standard-nav-link:hover {
+  color: #FFF301;
+  padding: 0px 25px 0px 25px;
+  text-decoration: none;
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  text-shadow: 10px 10px 10px #ff0000;
+  cursor: pointer;
+} 
+
+.spiderman-nav-link:hover {
+  color: #5076ff;
+  padding: 0px 25px 0px 25px;
+  text-decoration: none;
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  text-shadow: 10px 10px 10px #ff0000;
+  cursor: pointer;
+}
+
+.hulk-nav-link:hover {
+  color: #86ca66;
+  padding: 0px 25px 0px 25px;
+  text-decoration: none;
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  text-shadow: 10px 10px 10px #ff0000;
+  cursor: pointer;
+}
+
+.ironman-nav-link:hover {
+  color: #ff0000;
+  padding: 0px 25px 0px 25px;
+  text-decoration: none;
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  text-shadow: 10px 10px 10px yellow;
+  cursor: pointer;
+}
+
+
+/* --------- MAIN BODY --------- */
+
+/* --------- UPPER SECTION --------- */
+
+.landing-page-images-container {
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+  width: 100%;
+  margin-top: -5%;
+  margin-left: -5%;
+}
+
+.landing-page-marvel-character-images-container {
+  margin-left: -4%;
+  margin-top: 5%;
+  margin-right: 7%;
+}
+
+.stan-lee-image {
+  width: 60%;
+  height: auto; 
+  padding-bottom: 75px;
+
+}
+
+.character-image {
+  width: 8vw;
+  height: 20vw; 
+  margin-right: 10px;
+  flex-grow: 1; 
+  object-fit: cover;
+  border-radius: 5%;
+  border: 2px solid #ff000060;
+}
+
+.character-image:hover {
+  border: 2px solid #ff0000;
+  cursor: pointer;
+  box-shadow: 2px 2px 20px 5px #ffffff;
+}
+
+/* --------- MIDDLE SECTION --------- */
+
+.mid-section-homepage {
+ background-color: #4b4b4b;
+ padding: 2px 0 2px 0;
+}
+
+.mid-section-hompeage-paragraph {
+  width: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Bangers", system-ui; 
+  line-height: 1.5;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: #fff;
+}
+  
+  /* --------- LOWER SECTION --------- */
+
+.lower-section-homepage {
+  background-color: #fff;
+  padding-top: 4px;
+}
+
+.more-marvel-characters > article > p {
+  font-family: "Bangers", system-ui;
+}
+
+.more-marvel-characters {
+  width: 98%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px; /* Add spacing between grid items */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.more-marvel-characters > article {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Ensures text is centered */
+}
+
+.more-marvel-characters > article > img {
+  width: 80%;
+}
+
+/* ----- FOOTER ---- */
+
+footer {
+  background-color: #fff;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.d-lanid-link {
+  text-decoration: none;
+  color: #000;
+}
+.d-lanid-link:hover {
+  color: #ff3131;
+}
+
+footer > p {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+}
+
+.footer-seperator {
+  color: #fb365a;
+}
