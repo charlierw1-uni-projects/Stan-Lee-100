@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="More information about Stan Lee's Characters">
     <title>Stan Lee 100</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Great+Vibes&display=swap"/>
     <script type="module">
-        import {getCharacterByName} from "./scripts/marvel-api.js";
+        import {getCharacterByName} from "/scripts/marvel-api.js";
 
         const selectedCharacter = localStorage.getItem("character"); // Get Character stored in local storage from previous page
-        const imageType = "portrait_incredible"; // Define the type of thumbnail image to retrieve from the marvel api
+        const imageType = "detail"; // Define the size of thumbnail image to retrieve from the marvel api
 
         getCharacterByName(selectedCharacter, imageType).then(character => { // Retrieve information about selected character using imported function
         const { name, description } = character;
+        console.log(character.name)
 
         document.title = `Stan Lee 100 - ${character.name}`; // Set the page title to the selected character
         document.getElementById('apiname').innerText = character.name; // Set the h1 to the character name
@@ -23,24 +29,27 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="logo.png" alt="A stylised image of Stan Lee using his glasses to show 100"></a>
+        <a href="index.html"><img src="/images/logo.svg" width="200" height="180" id="logo" alt="A stylised image of Stan Lee using his glasses to show 100"></a>
         <nav>
             <ul>
-                <a href="index.html"><li>Home</li></a>
-                <a href="about.html"><li>About Stan Lee</li></a>
-                <a href="index.html"><li>Character #1</li></a>
-                <a href="index.html"><li>Character #2</li></a>
-                <a href="index.html"><li>Character #3</li></a>
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="about.html">About Stan Lee</a></li>
+                <li><a class="nav-link spiderman-nav" href="character.html" onclick="localStorage.setItem('character', 'Spider-Man (Peter Parker)')">Spider-Man</a></li>
+                <li><a class="nav-link ironman-nav" href="character.html" onclick="localStorage.setItem('character', 'Iron Man')">Iron Man</a></li>
+                <li><a class="nav-link hulk-nav" href="character.html" onclick="localStorage.setItem('character', 'Hulk')">The Hulk</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1 id="apiname"></h1>
-        <img id="apithumb">
+    <main id="character-main">
+        <h1>Stan Lee's Characters</h1>
+        <figure>
+            <img id="apithumb">
+            <figcaption id="apiname"></figcaption>
+        </figure>
         <p id="apidescription"></p>
     </main>
     <footer>
-        <p>Data provided by Marvel. © 2014 Marvel</p>
+        <p>Data provided by Marvel. &copy; 2014 Marvel</p>
     </footer>
 </body>
 </html>
