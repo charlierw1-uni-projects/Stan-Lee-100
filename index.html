@@ -1,36 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stan Lee 100</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Celebrating 100 years of Stan Lee & his characters">
+    <title>Stan Lee 100 - Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Great+Vibes&display=swap"/>
+    <script type="module">
+      import {getCharacterByName} from "/scripts/marvel-api.js";
+
+      const selectedCharacter = localStorage.getItem("character"); // Get Character stored in local storage from previous page
+      const imageType = "standard_incredible"; // Define the size of thumbnail image to retrieve from the marvel api
+
+      Array.from(document.getElementsByClassName("character-image")).forEach(image => { // For each element with the character-image tag get the right image from the api based on its id
+        const selectedCharacter = image.id.replaceAll("_", " "); // Replace each _ in the retrieved id with a space so it will work with the api
+        getCharacterByName(selectedCharacter, imageType).then(character => { // Retrieve information about selected character using imported function
+          const { name, description } = character;
+          image.src = character.imageURL; // Change the images src to the url of the retrieved image
+        });
+      });
+  </script>
+  </head>
+  <body>
     <header>
-        <a href="index.html"><img src="logo.png" alt="A stylised image of Stan Lee using his glasses to show 100"></a>
-        <nav>
-            <ul>
-                <a href="index.html"><li>Home</li></a>
-                <a href="about.html"><li>About Stan Lee</li></a>
-                <a href="character.html" onclick="localStorage.setItem('character', 'Spider-Man (Peter Parker)')"><li>Spider-Man</li></a>
-                <a href="character.html" onclick="localStorage.setItem('character', 'Iron Man')"><li>Iron Man</li></a>
-                <a href="character.html" onclick="localStorage.setItem('character', 'Hulk')"><li>The Hulk</li></a>
-            </ul>
-        </nav>
+      <img class="logo" src="images/logo.svg" width="200" height="180" alt="A logo showing a book with 'Stan Lee 100 Years in it'" />
+      <nav>
+        <ul class="nav-menu">
+          <li><a class="standard-nav-link" href="#">Home</a></li>
+          <li><a class="standard-nav-link" href="#">About Stan Lee</a></li>
+          <li>
+            <a class="spiderman-nav-link" href="/character.html" onclick="localStorage.setItem('character', 'Spider-Man (Peter Parker)')">Spider Man</a>
+          </li>
+          <li>
+            <a class="hulk-nav-link" href="/character.html" onclick="localStorage.setItem('character', 'Hulk')">Hulk</a>
+          </li>
+          <li>
+            <a class="ironman-nav-link" href="/character.html" onclick="localStorage.setItem('character', 'Iron Man')">Iron Man</a>
+          </li>
+        </ul>
+      </nav>
     </header>
+
     <main>
       <h1>100 Years of Stan Lee</h1>
-      <div class="all-images-container">
-        <img class="stan-lee-image" src="images/stan-lee-no-background.png"
-          alt="A stylised image of Stan Lee using his glasses to show 100" />
-        <div class="marvel-character-images-container">
-          <img class="spiderman-image" src="images/spiderman.jpg" alt="spiderman image" />
-          <img class="hulk-image" src="images/hulk.jpg" alt="hulk" />
-          <img class="ironman-image" src="images/iron-man-mark-85-contemplation-mld9b9o18eaa03go.jpg" alt="" />
+      <section class="landing-page-images-container">
+        <img class="stan-lee-image" src="images/stan-lee-no-background.png" alt="A stylised image of Stan Lee using his glasses to show 100"/>
+        <article class="landing-page-marvel-character-images-container">
+          <img class="character-image" id="Spider-Man_(Peter_Parker)" alt="An Image of Spider-Man"/>
+          <img class="character-image" id="Hulk" alt="An Image of The Hulk" />
+          <img class="character-image" id="Iron_Man" alt="An Image of Iron Man"/>
+        </article>
+      </section>
+
+      <section class="mid-section-homepage">
+        <h2>Welcome</h2>
+        <p class="mid-section-hompeage-paragraph">
+          Welcome to the "100 years of Stan Lee" website. Here you will find
+          information about Stan Lee's lifetime achievements, characters he has
+          created, and information about significant stages of Stan's life.
+          <br />
+          <br />
+          Feel free to have a look around, enjoy the website and most of all...
+          have fun learning more about the Marvel legend himself.
+        </p>
+      </section>
+
+      <section class="lower-section-homepage">
+        <h3>More Marvel Characters...</h3>
+        <div class="more-marvel-characters">
+
+          <article>
+            <p>Thor</p>
+            <img class="character-image" id="Thor" alt="An image of Thor"/>
+          </article>
+
+          <article>
+            <p>Captain America</p>
+            <img class="character-image" id="Captain_America" alt="An image of Captain America" />
+          </article>
+
+          <article>
+            <p>Black Panther</p>
+            <img class="character-image" id="Black_Panther" alt="An image of Black Panther"/>
+          </article>
+
+          <article>
+            <p>Wolverine</p>
+            <img class="character-image" id="Wolverine" alt="An image of Wolverine"/>
+          </article>
+
+          <article>
+            <p>Daredevil</p>
+            <img class="character-image" id="Daredevil" alt="An image of Daredevil"/>
+          </article>
+
+          <article>
+            <p>Groot</p>
+            <img class="character-image" id="Groot" alt="An image of Groot"/>
+          </article>
+
+          <article>
+            <p>Doctor Doom</p>
+            <img class="character-image" id="Doctor_Doom" alt="An image of Doctor Doom"/>
+          </article>
+
+          <article>
+            <p>Silver Surfer</p>
+            <img class="character-image" id="Silver_Surfer" alt="An image of Silver Surfer"/>
+          </article>
         </div>
+      </section>
     </main>
+
     <footer>
-        <p>Stan Lee image Credit: <a href="dlanid.com">Dlanid.com</a> | Data provided by Marvel. © 2014 Marvel</p>
+      <p>
+        Stan Lee image Credit:
+        <a class="d-lanid-link" href="https://www.dlanid.com" target="_blank">Dlanid.com</a>
+        <span class="footer-seperator">|</span> Data provided by Marvel. &copy;
+        2014 Marvel
+      </p>
     </footer>
-</body>
+  </body>
 </html>
