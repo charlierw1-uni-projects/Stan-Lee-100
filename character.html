@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="More information about Stan Lee's Characters">
-    <title>Stan Lee 100</title>
+    <title>100 Years of Stan</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +19,7 @@
         const { name, description } = character;
         console.log(character.name)
 
-        document.title = `Stan Lee 100 - ${character.name}`; // Set the page title to the selected character
+        document.title = `100 Years of Stan - ${character.name}`; // Set the page title to the selected character
         document.getElementById('apiname').innerText = character.name; // Set the h1 to the character name
         document.getElementById('apidescription').innerText = character.description; // Set the p to the character description
         document.getElementById('apithumb').src = character.imageURL; // Set the img src to the character image url
@@ -35,8 +35,8 @@
                 <li><a class="nav-link" href="index.html">Home</a></li>
                 <li><a class="nav-link" href="about.html">About Stan Lee</a></li>
                 <li><a class="nav-link spiderman-nav" href="character.html" onclick="localStorage.setItem('character', 'Spider-Man (Peter Parker)')">Spider-Man</a></li>
-                <li><a class="nav-link ironman-nav" href="character.html" onclick="localStorage.setItem('character', 'Iron Man')">Iron Man</a></li>
                 <li><a class="nav-link hulk-nav" href="character.html" onclick="localStorage.setItem('character', 'Hulk')">The Hulk</a></li>
+                <li><a class="nav-link ironman-nav" href="character.html" onclick="localStorage.setItem('character', 'Iron Man')">Iron Man</a></li>
             </ul>
         </nav>
     </header>
