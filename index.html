@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Celebrating 100 years of Stan Lee & his characters">
-    <title>Stan Lee 100 - Home</title>
+    <title>100 Years of Stan - Home</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +27,7 @@
   <body>
     <header>
       <img class="logo" src="images/logo.svg" width="200" height="180" alt="A logo showing a book with 'Stan Lee 100 Years in it'" />
-      <nav>
+      <nav> 
         <ul class="nav-menu">
           <li><a class="standard-nav-link" href="#">Home</a></li>
           <li><a class="standard-nav-link" href="#">About Stan Lee</a></li>
@@ -35,7 +35,7 @@
             <a class="spiderman-nav-link" href="/character.html" onclick="localStorage.setItem('character', 'Spider-Man (Peter Parker)')">Spider Man</a>
           </li>
           <li>
-            <a class="hulk-nav-link" href="/character.html" onclick="localStorage.setItem('character', 'Hulk')">Hulk</a>
+            <a class="hulk-nav-link" href="/character.html" onclick="localStorage.setItem('character', 'Hulk')">The Hulk</a>
           </li>
           <li>
             <a class="ironman-nav-link" href="/character.html" onclick="localStorage.setItem('character', 'Iron Man')">Iron Man</a>
@@ -45,22 +45,20 @@
     </header>
 
     <main>
-      <h1>100 Years of Stan Lee</h1>
+      <h1>100 Years of Stan</h1>
       <section class="landing-page-images-container">
-        <img class="stan-lee-image" src="images/stan-lee-no-background.png" alt="A stylised image of Stan Lee using his glasses to show 100"/>
+        <img class="stan-lee-image" src="images/stan-lee-no-background.webp" alt="A stylised image of Stan Lee using his glasses to show 100"/>
         <article class="landing-page-marvel-character-images-container">
-          <img class="character-image" id="Spider-Man_(Peter_Parker)" alt="An Image of Spider-Man"/>
-          <img class="character-image" id="Hulk" alt="An Image of The Hulk" />
-          <img class="character-image" id="Iron_Man" alt="An Image of Iron Man"/>
+          <a href="character.html" onclick="localStorage.setItem('character', 'Spider-Man (Peter Parker)')"><img class="character-image" id="Spider-Man_(Peter_Parker)" alt="An Image of Spider-Man"/></a>
+          <a href="character.html" onclick="localStorage.setItem('character', 'Hulk')"><img class="character-image" id="Hulk" alt="An Image of The Hulk" /></a>
+          <a href="character.html" onclick="localStorage.setItem('character', 'Iron Man')"><img class="character-image" id="Iron_Man" alt="An Image of Iron Man"/></a>
         </article>
       </section>
 
       <section class="mid-section-homepage">
         <h2>Welcome</h2>
         <p class="mid-section-hompeage-paragraph">
-          Welcome to the "100 years of Stan Lee" website. Here you will find
-          information about Stan Lee's lifetime achievements, characters he has
-          created, and information about significant stages of Stan's life.
+          Welcome to the "100 years of Stan Lee" website. Here you will find<br>information about Stan Lee's lifetime achievements, characters he has<br>created, and information about significant stages of Stan's life.
           <br />
           <br />
           Feel free to have a look around, enjoy the website and most of all...
@@ -68,51 +66,49 @@
         </p>
       </section>
 
-      <section class="lower-section-homepage">
-        <h3>More Marvel Characters...</h3>
-        <div class="more-marvel-characters">
+        <h2>More Marvel Characters...</h2>
+        <section class="more-marvel-characters">
 
-          <article>
-            <p>Thor</p>
-            <img class="character-image" id="Thor" alt="An image of Thor"/>
-          </article>
+          <figure>
+            <figcaption>Thor</figcaption>
+            <a href="character.html" onclick="localStorage.setItem('character', 'Thor')"><img class="character-image" id="Thor" alt="An image of Thor"/></a>
+          </figure>
 
-          <article>
-            <p>Captain America</p>
-            <img class="character-image" id="Captain_America" alt="An image of Captain America" />
-          </article>
+          <figure>
+            <figcaption>Captain America</figcaption>
+            <a href="character.html" onclick="localStorage.setItem('character', 'Captain America')"><img class="character-image" id="Captain_America" alt="An image of Captain America"/></a>
+          </figure>
 
-          <article>
-            <p>Black Panther</p>
-            <img class="character-image" id="Black_Panther" alt="An image of Black Panther"/>
-          </article>
+          <figure>
+            <figcaption>Black Panther</figcaption>
+            <a href="character.html" onclick="localStorage.setItem('character', 'Black Panther')"><img class="character-image" id="Black_Panther" alt="An image of Black Panther"/></a>
+          </figure>
 
-          <article>
-            <p>Wolverine</p>
-            <img class="character-image" id="Wolverine" alt="An image of Wolverine"/>
-          </article>
+          <figure>
+            <figcaption>Wolverine</figcaption>
+            <a href="character.html" onclick="localStorage.setItem('character', 'Wolverine')"><img class="character-image" id="Wolverine" alt="An image of Wolverine"/></a>
+          </figure>
 
-          <article>
-            <p>Daredevil</p>
-            <img class="character-image" id="Daredevil" alt="An image of Daredevil"/>
-          </article>
+          <figure>
+            <figcaption>Daredevil</figcaption>
+            <a href="character.html" onclick="localStorage.setItem('character', 'Daredevil')"><img class="character-image" id="Daredevil" alt="An image of Daredevil"/></a>
+          </figure>
 
-          <article>
-            <p>Groot</p>
-            <img class="character-image" id="Groot" alt="An image of Groot"/>
-          </article>
+          <figure>
+            <figcaption>Groot</figcaption>
+            <a href="character.html" onclick="localStorage.setItem('character', 'Groot')"><img class="character-image" id="Groot" alt="An image of Groot"/></a>
+          </figure>
 
-          <article>
-            <p>Doctor Doom</p>
-            <img class="character-image" id="Doctor_Doom" alt="An image of Doctor Doom"/>
-          </article>
+          <figure>
+            <figcaption>Doctor Doom</figcaption>
+            <a href="character.html" onclick="localStorage.setItem('character', 'Doctor Doom')"><img class="character-image" id="Doctor_Doom" alt="An image of Doctor Doom"/></a>
+          </figure>
 
-          <article>
-            <p>Silver Surfer</p>
-            <img class="character-image" id="Silver_Surfer" alt="An image of Silver Surfer"/>
-          </article>
-        </div>
-      </section>
+          <figure>
+            <figcaption>Silver Surfer</figcaption>
+            <a href="character.html" onclick="localStorage.setItem('character', 'Silver Surfer')"><img class="character-image" id="Silver_Surfer" alt="An image of Silver Surfer"/></a>
+          </figure>
+        </section>
     </main>
 
     <footer>
