@@ -14,14 +14,14 @@ header {
 }
 
 nav {
-    width: 60%;
+    width: 80%;
 }
 
 nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    font-size: clamp(0.75rem, 2.5vw, 1.75rem);
+    font-size: clamp(1rem, 2.5vw, 1.75rem);
     font-family: "Bangers", system-ui;
     padding-bottom: 1vw;
 }
