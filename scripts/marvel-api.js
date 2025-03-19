@@ -1,4 +1,4 @@
-import md5 from "./js-md5.js"; // Import the module used for the md5 hash
+import create from "./js-md5.js"; // Import the module used for the md5 hash
 
 const publicKey = "fd241079f6edb887b45d5bea6416cb89"; // Marvel api public key
 const privateKey = "27e8d44d73f2300fbcf59bc1a47bb59e9a0a6285"; // Marvel api private key
@@ -40,3 +40,4 @@ export async function getCharacterByName(characterName, imageType) {
         return false;  // Return false to indicate failure
     }
 }
+
