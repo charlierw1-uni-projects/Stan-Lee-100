@@ -9,7 +9,7 @@ h1 {
   color: #FFF301;
   text-align: center;
   font-family: "Great Vibes", cursive;
-  font-size: clamp(1.25rem, 4vw, 4rem);
+  font-size: clamp(1.25rem, 6vw, 6rem);
   margin-top: 8%;
 }
 
@@ -41,7 +41,7 @@ header {
 /* --------- NAVIGATION --------- */
 
 nav {
-  width: 60%;
+  width: 80%;
 }
 
 nav ul {
@@ -158,16 +158,12 @@ nav ul {
   
   /* --------- LOWER SECTION --------- */
 
-.lower-section-homepage {
-  background-color: #fff;
-  padding-top: 4px;
-}
-
-.more-marvel-characters > article > p {
+.more-marvel-characters > figure > figcaption {
   font-family: "Bangers", system-ui;
 }
 
 .more-marvel-characters {
+  background-color: #fff;
   width: 98%;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
@@ -176,14 +172,14 @@ nav ul {
   margin-right: auto;
 }
 
-.more-marvel-characters > article {
+.more-marvel-characters > figure {
   display: flex;
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center horizontally */
   text-align: center; /* Ensures text is centered */
 }
 
-.more-marvel-characters > article > img {
+.more-marvel-characters > figure > a> img {
   width: 80%;
 }
 
