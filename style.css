@@ -6,11 +6,25 @@ body {
 }
 
 h1 {
-  color: #FFF301;
+  color: white;
   text-align: center;
   font-family: "Great Vibes", cursive;
   font-size: clamp(1.25rem, 6vw, 6rem);
   margin-top: 8%;
+  animation: glow 5s infinite alternate;
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #d7bb00, 0 0 20px #d7bb00, 0 0 30px #d7bb00;
+  }
+
+  50% {
+    text-shadow: 0 0 10px #df0000, 0 0 25px #df0000, 0 0 40px #df0000;
+  }
+
+  100% {
+    text-shadow: 0 0 10px #d7bb00, 0 0 20px #d7bb00, 0 0 30px #d7bb00;
+  }
 }
 
 h2 {
@@ -28,8 +42,12 @@ h3 {
   word-spacing: 2.5px;
 }
 
+#logolink {
+  width: 10%;
+}
+
 .logo {
-  width: 10%; /* Adjust size */
+  width: 100%; /* Adjust size */
 }
 
 header {
@@ -208,4 +226,45 @@ footer > p {
 
 .footer-seperator {
   color: #fb365a;
+}
+
+#Hulk {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }

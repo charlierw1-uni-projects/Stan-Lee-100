@@ -1,0 +1,131 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+nav {
+  width: 80%;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: clamp(1rem, 2.5vw, 1.75rem);
+  font-family: "Bangers", system-ui;
+  padding-bottom: 1vw;
+}
+.nav-link:hover {
+  color: #fff301;
+  text-shadow: 10px 10px 10px #ff0000;
+  padding: 0px 25px 0px 25px;
+  text-decoration: none;
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+.spiderman-nav:hover {
+  color: #5076ff;
+  padding: 0px 25px 0px 25px;
+  text-decoration: none;
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  text-shadow: 10px 10px 10px #ff0000;
+}
+.ironman-nav:hover {
+  color: #ff0000;
+  padding: 0px 25px 0px 25px;
+  text-decoration: none;
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  text-shadow: 10px 10px 10px #fff301;
+}
+.hulk-nav:hover {
+  color: #86ca66;
+  padding: 0px 25px 0px 25px;
+  text-decoration: none;
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  text-shadow: 10px 10px 10px #ff0000;
+}
+body {
+  background-color: #141e20;
+  color: white;
+}
+h1 {
+  color: #fff;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 70px;
+  margin-top: -2%;
+  padding-bottom: 3%;
+  animation: glow 5s infinite alternate;
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #d7bb00, 0 0 20px #d7bb00, 0 0 30px #d7bb00;
+  }
+
+  50% {
+    text-shadow: 0 0 10px #df0000, 0 0 25px #df0000, 0 0 40px #df0000;
+  }
+
+  100% {
+    text-shadow: 0 0 10px #d7bb00, 0 0 20px #d7bb00, 0 0 30px #d7bb00;
+  }
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.images img {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 1%;
+}
+.bio h2 {
+  text-align: center;
+  font-family: "Bangers", system-ui;
+  letter-spacing: 1.8px;
+  margin-top: -2%;
+  margin-bottom: 2%;
+}
+.bio p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: 3%;
+}
+.achievements h2 {
+  text-align: center;
+  font-family: "Bangers", system-ui;
+  letter-spacing: 1.8px;
+  margin-bottom: 2%;
+}
+.achievementsimg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1%;
+}
+.achievementsimg img {
+  width: 500px;
+  height: 400px;
+  margin-bottom: 1rem;
+  margin-bottom: 1%;
+}
+.achievements li {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: solid;
+  list-style-type: circle;
+}
+
+#logolink {
+  width: 10%;  
+}
+
+#logo {
+  width: 100%;
+}

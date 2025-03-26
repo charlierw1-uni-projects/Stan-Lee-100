@@ -114,6 +114,10 @@ figcaption {
     width: 50%;
 }
 
+#logolink {
+    width: 10%;
+}
+
 #logo {
-    width: 10vw;
+    width: 100%;
 }
