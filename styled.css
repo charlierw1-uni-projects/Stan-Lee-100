@@ -122,6 +122,10 @@ h1 {
   list-style-type: circle;
 }
 
+footer {
+  justify-items: center;
+}
+
 #logolink {
   width: 10%;  
 }
