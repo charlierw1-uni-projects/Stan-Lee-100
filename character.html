@@ -9,15 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Great+Vibes&display=swap"/>
+    <script>
+        function setCharacter(character) {
+            window.localStorage.setItem("character", character); // Set the "character" value in localstorage to the character argument
+            setTimeout(() => { // Delay the following so the localstorage is set before the page load
+                window.location.href = "character.html"; // Manually change the page to load character.html
+            }, 100);
+        }
+    </script>
     <script type="module">
         import {getCharacterByName} from "/scripts/marvel-api.js";
-
-        const selectedCharacter = localStorage.getItem("character"); // Get Character stored in local storage from previous page
+        document.addEventListener("DOMContentLoaded", () => {
+        const selectedCharacter = window.localStorage.getItem("character"); // Get Character stored in local storage from previous page
         const imageType = "detail"; // Define the size of thumbnail image to retrieve from the marvel api
 
         getCharacterByName(selectedCharacter, imageType).then(character => { // Retrieve information about selected character using imported function
         const { name, description } = character;
-        console.log(character.name)
 
         document.title = `100 Years of Stan - ${character.name}`; // Set the page title to the selected character
         document.getElementById('apiname').innerText = character.name; // Set the h1 to the character name
@@ -25,6 +32,7 @@
         document.getElementById('apithumb').src = character.imageURL; // Set the img src to the character image url
         document.getElementById("apithumb").alt = `A portrait of ${character.name}` // Set the img alt to the portrait of the character
         });
+    });
     </script>
 </head>
 <body>
@@ -34,9 +42,9 @@
             <ul>
                 <li><a class="nav-link" href="index.html">Home</a></li>
                 <li><a class="nav-link" href="about.html">About Stan Lee</a></li>
-                <li><a class="nav-link spiderman-nav" href="character.html" onclick="localStorage.setItem('character', 'Spider-Man (Peter Parker)')">Spider-Man</a></li>
-                <li><a class="nav-link hulk-nav" href="character.html" onclick="localStorage.setItem('character', 'Hulk')">The Hulk</a></li>
-                <li><a class="nav-link ironman-nav" href="character.html" onclick="localStorage.setItem('character', 'Iron Man')">Iron Man</a></li>
+                <li><a class="nav-link spiderman-nav" onclick="setCharacter('Spider-Man (Peter Parker)')">Spider-Man</a></li>
+                <li><a class="nav-link hulk-nav" onclick="setCharacter('Hulk')">The Hulk</a></li>
+                <li><a class="nav-link ironman-nav" onclick="setCharacter('Iron Man')">Iron Man</a></li>
             </ul>
         </nav>
     </header>

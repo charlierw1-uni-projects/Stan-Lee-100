@@ -27,6 +27,7 @@ nav ul {
 }
 
 .nav-link:hover {
+    cursor: pointer;
     color: #FFF301;
     text-shadow: 10px 10px 10px #ff0000;
     padding: 0px 25px 0px 25px;

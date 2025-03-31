@@ -9,6 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Great+Vibes&display=swap"/>
+    <script>
+      function setCharacter(character) {
+          window.localStorage.setItem("character", character); // Set the "character" value in localstorage to the character argument
+          setTimeout(() => { // Delay the following so the localstorage is set before the page load
+              window.location.href = "character.html"; // Manually change the page to load character.html
+          }, 100);
+      }
+    </script>
     <script type="module">
       import {getCharacterByName} from "/scripts/marvel-api.js";
 
@@ -32,13 +40,13 @@
           <li><a class="standard-nav-link" href="#">Home</a></li>
           <li><a class="standard-nav-link" href="about.html">About Stan Lee</a></li>
           <li>
-            <a class="spiderman-nav-link" href="character.html" onclick="localStorage.setItem('character', 'Spider-Man (Peter Parker)')">Spider Man</a>
+            <a class="spiderman-nav-link" onclick="setCharacter('Spider-Man (Peter Parker)')">Spider Man</a>
           </li>
           <li>
-            <a class="hulk-nav-link" href="character.html" onclick="localStorage.setItem('character', 'Hulk')">The Hulk</a>
+            <a class="hulk-nav-link" onclick="setCharacter('Hulk')">The Hulk</a>
           </li>
           <li>
-            <a class="ironman-nav-link" href="character.html" onclick="localStorage.setItem('character', 'Iron Man')">Iron Man</a>
+            <a class="ironman-nav-link" onclick="setCharacter('Iron Man')">Iron Man</a>
           </li>
         </ul>
       </nav>
@@ -49,9 +57,9 @@
       <section class="landing-page-images-container">
         <img class="stan-lee-image" src="images/stan-lee-no-background.webp" alt="A stylised image of Stan Lee using his glasses to show 100"/>
         <article class="landing-page-marvel-character-images-container">
-          <a href="character.html" onclick="localStorage.setItem('character', 'Spider-Man (Peter Parker)')"><img class="character-image" id="Spider-Man_(Peter_Parker)" alt="An Image of Spider-Man"/></a>
-          <a href="character.html" onclick="localStorage.setItem('character', 'Hulk')"><img class="character-image" id="Hulk" alt="An Image of The Hulk" /></a>
-          <a href="character.html" onclick="localStorage.setItem('character', 'Iron Man')"><img class="character-image" id="Iron_Man" alt="An Image of Iron Man"/></a>
+          <a onclick="setCharacter('Spider-Man (Peter Parker)')"><img class="character-image" id="Spider-Man_(Peter_Parker)" alt="An Image of Spider-Man"/></a>
+          <a onclick="setCharacter('Hulk')"><img class="character-image" id="Hulk" alt="An Image of The Hulk" /></a>
+          <a onclick="setCharacter('Iron Man')"><img class="character-image" id="Iron_Man" alt="An Image of Iron Man"/></a>
         </article>
       </section>
 
@@ -71,46 +79,45 @@
 
           <figure>
             <figcaption>Thor</figcaption>
-            <a href="character.html" onclick="localStorage.setItem('character', 'Thor')"><img class="character-image" id="Thor" alt="An image of Thor"/></a>
+            <a onclick="setCharacter('Thor')"><img class="character-image" id="Thor" alt="An image of Thor"/></a>
           </figure>
 
           <figure>
             <figcaption>Captain America</figcaption>
-            <a href="character.html" onclick="localStorage.setItem('character', 'Captain America')"><img class="character-image" id="Captain_America" alt="An image of Captain America"/></a>
+            <a onclick="setCharacter('Captain America')"><img class="character-image" id="Captain_America" alt="An image of Captain America"/></a>
           </figure>
 
           <figure>
             <figcaption>Black Panther</figcaption>
-            <a href="character.html" onclick="localStorage.setItem('character', 'Black Panther')"><img class="character-image" id="Black_Panther" alt="An image of Black Panther"/></a>
+            <a onclick="setCharacter('Black Panther')"><img class="character-image" id="Black_Panther" alt="An image of Black Panther"/></a>
           </figure>
 
           <figure>
             <figcaption>Wolverine</figcaption>
-            <a href="character.html" onclick="localStorage.setItem('character', 'Wolverine')"><img class="character-image" id="Wolverine" alt="An image of Wolverine"/></a>
+            <a onclick="setCharacter('Wolverine')"><img class="character-image" id="Wolverine" alt="An image of Wolverine"/></a>
           </figure>
 
           <figure>
             <figcaption>Daredevil</figcaption>
-            <a href="character.html" onclick="localStorage.setItem('character', 'Daredevil')"><img class="character-image" id="Daredevil" alt="An image of Daredevil"/></a>
+            <a onclick="setCharacter('Daredevil')"><img class="character-image" id="Daredevil" alt="An image of Daredevil"/></a>
           </figure>
 
           <figure>
             <figcaption>Groot</figcaption>
-            <a href="character.html" onclick="localStorage.setItem('character', 'Groot')"><img class="character-image" id="Groot" alt="An image of Groot"/></a>
+            <a onclick="setCharacter('Groot')"><img class="character-image" id="Groot" alt="An image of Groot"/></a>
           </figure>
 
           <figure>
             <figcaption>Doctor Doom</figcaption>
-            <a href="character.html" onclick="localStorage.setItem('character', 'Doctor Doom')"><img class="character-image" id="Doctor_Doom" alt="An image of Doctor Doom"/></a>
+            <a onclick="setCharacter('Doctor Doom')"><img class="character-image" id="Doctor_Doom" alt="An image of Doctor Doom"/></a>
           </figure>
 
           <figure>
             <figcaption>Silver Surfer</figcaption>
-            <a href="character.html" onclick="localStorage.setItem('character', 'Silver Surfer')"><img class="character-image" id="Silver_Surfer" alt="An image of Silver Surfer"/></a>
+            <a onclick="setCharacter('Silver Surfer')"><img class="character-image" id="Silver_Surfer" alt="An image of Silver Surfer"/></a>
           </figure>
         </section>
     </main>
-
     <footer>
       <p>
         Stan Lee image Credit:

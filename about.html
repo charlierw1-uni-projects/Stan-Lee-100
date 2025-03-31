@@ -11,6 +11,14 @@
     />
     <title>About Stan-Lee</title>
     <link rel="stylesheet" href="about.css" />
+    <script>
+      function setCharacter(character) {
+          window.localStorage.setItem("character", character); // Set the "character" value in localstorage to the character argument
+          setTimeout(() => { // Delay the following so the localstorage is set before the page load
+              window.location.href = "character.html"; // Manually change the page to load character.html
+          }, 100);
+      }
+  </script>
   </head>
   <body>
     <header>
@@ -30,24 +38,21 @@
           <li>
             <a
               class="nav-link spiderman-nav"
-              href="character.html"
-              onclick="localStorage.setItem('character', 'Spider-Man (Peter Parker)')"
+              onclick="setCharacter('Spider-Man (Peter Parker)')"
               >Spider-Man</a
             >
           </li>
           <li>
             <a
               class="nav-link hulk-nav"
-              href="character.html"
-              onclick="localStorage.setItem('character', 'Hulk')"
+              onclick="setCharacter('Hulk')"
               >The Hulk</a
             >
           </li>
           <li>
             <a
               class="nav-link ironman-nav"
-              href="character.html"
-              onclick="localStorage.setItem('character', 'Iron Man')"
+              onclick="setCharacter('Iron Man')"
               >Iron Man</a
             >
           </li>
