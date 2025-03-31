@@ -229,7 +229,7 @@ footer > p {
   color: #fb365a;
 }
 
-#Hulk {
+#Hulk:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
